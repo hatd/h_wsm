@@ -1,0 +1,122 @@
+body {
+  min-width: 440px;
+  min-height: 35px;
+}
+
+#message {
+  white-space: break-spaces;
+}
+
+#loader {
+  display: flex;
+  justify-content: center;
+}
+
+.arror-down {
+  --delay: 0s;
+  animation: arrows 1s var(--delay) infinite ease-in;
+}
+
+@keyframes arrows {
+  0%,
+  100% {
+    color: black;
+    transform: translateY(0);
+  }
+  50% {
+    color: #3AB493;
+    transform: translateY(20px);
+  }
+}
+
+.content {
+  margin: 10px 0;
+}
+
+.footer {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+tr:hover {
+  background-color: #ccc;
+}
+th {
+  display: table-cell;
+}
+
+td {
+  display: table-cell;
+  padding: 5px 0;
+}
+
+.event-timesheets {
+  background: #fff;
+  border-radius: 10px;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  display: inline-flex;
+  margin: 0 auto
+}
+
+.check-time {
+  padding: 0 10px;
+  border: solid 1px #e6e6e6;
+  height: 100%;
+  min-width: 30px;
+}
+
+.check-in {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.check-out {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.date {
+  width: 100px;
+}
+
+.time {
+  width: 120px;
+}
+
+.request {
+  white-space: break-spaces;
+}
+
+.action {
+  width: 45px;
+}
+
+.view-ot-com {
+  margin-top: 5px;
+}
+
+.bg-green {
+  background: #0f0 !important;
+}
+
+.bg-red {
+  background: #f00 !important;
+}

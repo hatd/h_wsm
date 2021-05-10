@@ -1,0 +1,31 @@
+.button {
+  color: #ffffff;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 30px;
+  min-width: 30px;
+  padding: 0 10px;
+  margin: 0 5px;
+}
+
+.button:disabled {
+  background: gray !important;
+}
+
+.button.blue {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #42a5f5, #2979ff) repeat scroll 0% 0%;
+}
+
+.button.blue:hover {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #2979ff, #42a5f5) repeat scroll 0% 0%;
+}
+
+.button.red {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #f57979, #b80303) repeat scroll 0% 0%;
+}
+
+.button.red:hover {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #b80303, #f57979) repeat scroll 0% 0%;
+}

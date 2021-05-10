@@ -1,0 +1,41 @@
+body {
+  color: #111111;
+  background-color: #f3f3f3;
+  min-height: 90vh;
+  min-width: 90vh;
+  font-size: 100%
+}
+
+#options {
+  width: 360px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center
+}
+
+.footer {
+  text-align: center
+}
+
+.option-content {
+  padding-left: 10px;
+}
+
+.option-sub-content {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.option-sub-content>div:last-child {
+  margin-left: auto;
+}
+
+.select {
+  margin-bottom: 10px;
+}
+
+.last-select {
+  display: flex;
+}

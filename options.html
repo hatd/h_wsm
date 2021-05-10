@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link href="css/button.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+    <link href="css/options.css" rel="stylesheet">
+    <link href="css/switch.css" rel="stylesheet">
+    <script src="scripts/jquery-3.5.1.min.js"></script>
+    <script src="scripts/chrome-alarms-api.js"></script>
+    <script src="scripts/chrome-cookies-api.js"></script>
+    <script src="scripts/chrome-local-storage-api.js"></script>
+    <script src="scripts/chrome-runtime.js"></script>
+    <script src="scripts/errors.js"></script>
+    <script src="scripts/login.js"></script>
+    <title>H WSM - Options</title>
+  </head>
+  <body>
+    <section id="options">
+      <div class="header">
+        <h1>H WSM</h1>
+      </div>
+      <div class="content">
+        <div class="option-group">
+          <h2 class="option-title">S*GOAL</h2>
+          <div class="option-content">
+            <div class="option-sub-content">
+              <div>Tự động remain unchange</div>
+              <div>
+                <div class="toggle checkcross">
+                  <input type="checkbox" id="remain_unchange">
+                  <label class="toggle-item" for="remain_unchange">
+                    <div class="check"></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="option-group">
+          <h2 class="option-title">WSM</h2>
+          <div class="option-content">
+            <div class="option-sub-content">
+              <div>Nhắc nhở khi quên tạo form</div>
+              <div>
+                <div class="toggle checkcross">
+                  <input type="checkbox" id="remain_form">
+                  <label class="toggle-item" for="remain_form">
+                    <div class="check"></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div id="remain_form_content">
+              <div class="option-sub-content">
+                <div>Thời gian nhận thông báo</div>
+                <div>
+                  <div class="last-select">
+                    <div style="width: 59px"></div>
+                    <button type="button" id="add_time" class="button blue">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="option-sub-content">
+                <div>Âm thanh thông báo</div>
+                <div>
+                  <div class="toggle checkcross">
+                    <input type="checkbox" id="remain_form_sound">
+                    <label class="toggle-item" for="remain_form_sound">
+                      <div class="check"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="option-sub-content" id="remain_form_sound_content">
+                <div>
+                  <select id="select_sound"></select>
+                </div>
+                <div>
+                  <button type="button" class="button blue" id="play">Play</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <button type="button" class="button blue" style="width: 100px;" id="save_option">Save</button>
+        <button type="button" class="button red" style="width: 100px;" id="account">Tài khoản</button>
+      </div>
+      <div id="modal-container">
+        <div class="modal-background">
+          <div class="modal">
+            <div class="modal-header">
+              <span class="close close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+              <div class="success" id="message"></div>
+              <div class="modal-input">
+                <div>Email</div>
+                <input type="email" id="email">
+              </div>
+              <div class="modal-input">
+                <div>Password</div>
+                <input type="password" id="password">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="button red close-modal" style="width: 100px;">Close</button>
+              <button type="button" class="button blue" style="width: 100px;" id="login">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="options.js"></script>
+  </body>
+</html>

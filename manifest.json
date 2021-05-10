@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "H wsm",
+  "version": "1.0",
+  "description": "Nhắc nhở những thứ bạn có thể quên",
+  "browser_action": {
+    "default_icon": "images/16.png",
+    "default_title": "H(à) wsm",
+    "default_popup": "popup.html"
+  },
+  "icons": {"16": "images/16.png", "48": "images/48.png", "128": "images/128.png"},
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "scripts/chrome-alarms-api.js",
+      "scripts/chrome-local-storage-api.js",
+      "scripts/chrome-cookies-api.js",
+      "scripts/chrome-notifications-api.js",
+      "scripts/errors.js",
+      "scripts/login.js",
+      "scripts/sgoal.js",
+      "scripts/wsm.js",
+      "background.js"
+    ]
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "debugger",
+    "storage",
+    "cookies",
+    "alarms",
+    "notifications",
+    "*://*.sun-asterisk.vn/",
+    "*://.sun-asterisk.vn/"
+  ]
+}
