@@ -38,11 +38,10 @@ async function getKRId(userUrl) {
     var krIds = [];
     var response = await fetch(userUrl);
     var result = await response.text();
-    var regex = /<div.*class=.*remain-unchanged.*>/g
+    var regex = /data-kr_id="\d+"/g
     var remainUnchagedElement = Array.from(result.matchAll(regex));
     remainUnchagedElement.forEach((el) => {
-      var id = el[0].match(/unchanged-\d+/);
-      if (id) {krIds.push(id[0].match(/\d+/)[0])}
+      krIds.push(el[0].match(/\d+/)[0])
     })
     return krIds
   } catch (e) {
