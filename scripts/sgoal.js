@@ -21,11 +21,13 @@ async function getUserUrl() {
     var result = await response.text();
 
     // trong service worker khong dung duoc DOM, dm no
-    var regex = new RegExp(`<div.*id="drop-quarter".*>`);
-    var dropQuarter = result.match(regex)
-    if (dropQuarter) {
-      var goalId = dropQuarter[0].match(/data-group="\d+"/)[0].match(/\d+/)[0];
-      return `https://goal.sun-asterisk.vn/groups/${goalId}`;
+    var regex = new RegExp(`<a class="main-menu__link text-decoration-none js-menulink " href="https://goal.sun-asterisk.vn/groups/.*">`);
+    var groupLinkElement = result.match(regex)[0]
+    if (groupLinkElement) {
+      var url = groupLinkElement.match(/https:\/\/goal.sun-asterisk.vn\/groups\/\d+/g)[0];
+      if(url){
+        return url;
+      }
     }
     throw formatError("info", "Không lấy được goal id", "getUserUrl");
   } catch (e) {
